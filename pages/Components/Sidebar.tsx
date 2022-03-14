@@ -14,7 +14,7 @@ import {
     BsPersonFill,
   } from 'react-icons/bs';
   import { useRouter } from 'next/router';
-const style = {
+  const style = {
     wrapper: `flex-[0.7] px-8 flex flex-col`,
     twitterIconContainer: `text-3xl m-4`,
     tweetButton: `bg-[#1d9bf0] hover:bg-[#1b8cd8] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
@@ -28,10 +28,11 @@ const style = {
     handle: `text-[#8899a6]`,
     moreContainer: `flex items-center mr-2`,
   }
-interface SidebarProps{
-    initialSelectedIcon:string
-}
-function Sidebar({ initialSelectedIcon }: SidebarProps) {
+  
+  interface SidebarProps {
+    initialSelectedIcon: string
+  }
+  function Sidebar({ initialSelectedIcon }: SidebarProps) {
     const router = useRouter();
     const [selected, setSelected] = useState<String>(initialSelectedIcon);
     return (
@@ -84,9 +85,15 @@ function Sidebar({ initialSelectedIcon }: SidebarProps) {
           redirect={'/profile'}
         />
          <SidebarOption Icon={CgMoreO} text='More' />
-         <div onClick={()=>{
-             router.push(`${router.pathname}/?mint=mehmet`)
-         }} className={style.tweetButton}></div>
+         <div
+          onClick={() =>
+            router.push(`${router.pathname}/?mint=$'mehmet'}`)
+          }
+          className={style.tweetButton}
+        >
+          Mint
+        </div>
+      
         
 </div>
     
