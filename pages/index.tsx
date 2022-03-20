@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Feed from './Components/home/Feed';
 import Sidebar from './Components/Sidebar';
-
+import Widgets from './Components/Widgets';
 const style = {
   wrapper: `flex justify-center h-screen w-screen select-none bg-[#15202b] text-white`,
   content: `max-w-[1400px] w-2/3 flex justify-between`,
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <Sidebar initialSelectedIcon={'Home'}/>
       <Feed />
        
-      <h2>Widgets</h2>
+      <Widgets />
       </div>
     </div>
   )
