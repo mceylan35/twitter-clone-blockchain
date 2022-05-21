@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { TwitterContext } from '../../context/TwitterContext'
 import React, { useContext, useEffect, useState } from 'react'
+import { BsArrowLeftShort } from 'react-icons/bs'
 const style = {
     wrapper: `border-[#38444d] border-b`,
     header: `py-1 px-3 mt-2 flex items-center`,
